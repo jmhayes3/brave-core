@@ -1447,7 +1447,6 @@ void RewardsServiceImpl::FetchGrants(const std::string& lang,
   if (!Connected()) {
     return;
   }
-#if !defined(OS_ANDROID)
   bat_ledger_->FetchGrants(lang, payment_id, "", base::BindOnce(
       &RewardsServiceImpl::OnFetchGrants,
       AsWeakPtr()));
