@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "base/bind.h"
+#include "base/metrics/histogram_macros.h"
 #include "base/strings/string_number_conversions.h"
 #include "base/strings/utf_string_conversions.h"
 #include "brave/components/brave_sync/brave_sync_prefs.h"
@@ -202,6 +203,7 @@ BraveProfileSyncServiceImpl::BraveProfileSyncServiceImpl(Profile* profile,
     brave_sync_configured_ = true;
   }
   network_connection_tracker_->AddNetworkConnectionObserver(this);
+  RecordSyncStateP3A();
 }
 
 void BraveProfileSyncServiceImpl::OnNudgeSyncCycle(RecordsListPtr records) {
@@ -902,6 +904,9 @@ void BraveProfileSyncServiceImpl::OnBraveSyncPrefsChanged(
     const std::string& pref) {
   if (pref == prefs::kSyncEnabled) {
     brave_sync_client_->OnSyncEnabledChanged();
+    RecordSyncStateP3A();
+  } else if (pref == prefs::kSyncDeviceList) {
+    RecordSyncStateP3A();
   }
   NotifySyncStateChanged();
 }
@@ -1075,6 +1080,15 @@ base::TimeDelta BraveProfileSyncServiceImpl::GetRetryExponentialWaitAmount(
 std::vector<unsigned>
 BraveProfileSyncServiceImpl::GetExponentialWaitsForTests() {
   return kExponentialWaits;
+}
+
+void BraveSyncServiceImpl::RecordSyncStateP3A() const {
+  int result = 0;
+  if (sync_prefs_->GetSyncEnabled()) {
+    // Answers are zero-based.
+    result = std::min(sync_prefs_->GetSyncDevices()->size(), 3UL) - 1UL;
+  }
+  UMA_HISTOGRAM_EXACT_LINEAR("Brave.Sync.Status", result, 2);
 }
 
 }  // namespace brave_sync
