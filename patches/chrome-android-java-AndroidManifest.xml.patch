@@ -1,0 +1,21 @@
+diff --git a/chrome/android/java/AndroidManifest.xml b/chrome/android/java/AndroidManifest.xml
+index d786da85cb5ffa8e346aa8d9a8028e2cda03dde5..8ef3c39201e1b2cfe4852b11ffcef5eef003cbe1 100644
+--- a/chrome/android/java/AndroidManifest.xml
++++ b/chrome/android/java/AndroidManifest.xml
+@@ -981,14 +981,14 @@ by a child template that "extends" this file.
+         </provider>
+ 
+         <!-- Sync adapter for browser invalidation. -->
+-        <service android:name="org.chromium.chrome.browser.invalidation.ChromeBrowserSyncAdapterService"
++        <!--<service android:name="org.chromium.chrome.browser.invalidation.ChromeBrowserSyncAdapterService"
+             android:exported="false">
+             <intent-filter>
+                 <action android:name="android.content.SyncAdapter" />
+             </intent-filter>
+             <meta-data android:name="android.content.SyncAdapter"
+                        android:resource="@xml/syncadapter" />
+-        </service>
++        </service>-->
+ 
+         <!-- Broadcast receiver that will be notified of account changes -->
+         <receiver android:name="org.chromium.chrome.browser.services.AccountsChangedReceiver">
