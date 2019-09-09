@@ -13,6 +13,7 @@
 #include "chrome/browser/prefs/session_startup_pref.h"
 #include "chrome/common/pref_names.h"
 #include "components/content_settings/core/common/pref_names.h"
+#include "components/gcm_driver/gcm_channel_status_syncer.h"
 #include "components/pref_registry/pref_registry_syncable.h"
 #include "components/safe_browsing/common/safe_browsing_prefs.h"
 #include "components/signin/public/base/signin_pref_names.h"
@@ -80,6 +81,9 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {
 
   // Media Router
   registry->SetDefaultPrefValue(prefs::kEnableMediaRouter, base::Value(false));
+
+  // PushMessaging
+  registry->SetDefaultPrefValue(gcm::prefs::kGCMChannelStatus, base::Value(false));
 
   // 1. We do not want to enable the MediaRouter pref directly, so
   // using a proxy pref to handle Media Router setting

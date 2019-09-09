@@ -10,6 +10,7 @@
 #include "chrome/common/pref_names.h"
 #include "chrome/common/extensions/api/settings_private.h"
 #include "components/browsing_data/core/pref_names.h"
+#include "components/gcm_driver/gcm_channel_status_syncer.h"
 
 namespace extensions {
 
@@ -92,6 +93,9 @@ const PrefsUtil::TypedPrefMap& BravePrefsUtil::GetWhitelistedKeys() {
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
   // Media Router Pref
   (*s_brave_whitelist)[kBraveEnabledMediaRouter] =
+      settings_api::PrefType::PREF_TYPE_BOOLEAN;
+  // Push Messaging Pref
+  (*s_brave_whitelist)[gcm::prefs::kGCMChannelStatus] =
       settings_api::PrefType::PREF_TYPE_BOOLEAN;
   return *s_brave_whitelist;
 }

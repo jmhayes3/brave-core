@@ -1,0 +1,13 @@
+diff --git a/components/gcm_driver/instance_id/instance_id_driver.cc b/components/gcm_driver/instance_id/instance_id_driver.cc
+index 8e0345b04d6ba853ce84aaef64f5840305cd0639..f8996fef341fd5b1eb725e7230bb0c9049f76f22 100644
+--- a/components/gcm_driver/instance_id/instance_id_driver.cc
++++ b/components/gcm_driver/instance_id/instance_id_driver.cc
+@@ -21,7 +21,7 @@ const char kInstanceIDFieldTrialDisabledGroupPrefix[] = "Disabled";
+ bool InstanceIDDriver::IsInstanceIDEnabled() {
+   std::string group_name =
+       base::FieldTrialList::FindFullName(kInstanceIDFieldTrialName);
+-  return !base::StartsWith(group_name, kInstanceIDFieldTrialDisabledGroupPrefix,
++  return true || !base::StartsWith(group_name, kInstanceIDFieldTrialDisabledGroupPrefix,
+                            base::CompareCase::INSENSITIVE_ASCII);
+ }
+ 

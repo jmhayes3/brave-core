@@ -10,9 +10,11 @@
 #include "base/values.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/browser/profiles/profile.h"
+#include "components/gcm_driver/gcm_channel_status_syncer.h"
 #include "components/prefs/pref_service.h"
 #include "content/public/common/webrtc_ip_handling_policy.h"
 #include "content/public/browser/web_ui.h"
+#include "content/public/browser/web_ui_data_source.h"
 
 void BravePrivacyHandler::RegisterMessages() {
   profile_ = Profile::FromWebUI(web_ui());
@@ -25,6 +27,13 @@ void BravePrivacyHandler::RegisterMessages() {
       "setWebRTCPolicy",
       base::BindRepeating(&BravePrivacyHandler::SetWebRTCPolicy,
                           base::Unretained(this)));
+}
+
+// static
+void BravePrivacyHandler::AddLoadTimeData(content::WebUIDataSource* data_source,
+                                          Profile* profile) {
+  data_source->AddBoolean("pushMessagingEnabledAtStartup",
+      profile->GetPrefs()->GetBoolean(gcm::prefs::kGCMChannelStatus));
 }
 
 void BravePrivacyHandler::SetWebRTCPolicy(const base::ListValue* args) {

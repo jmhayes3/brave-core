@@ -54,5 +54,14 @@ Polymer({
   onWebRTCPolicyChange_: function() {
     this.browserProxy_.setWebRTCPolicy(this.$.webRTCPolicy.value);
   },
+
+  shouldShowRestart_: function(enabled) {
+    return enabled != this.browserProxy_.wasPushMessagingEnabledAtStartup();
+  },
+
+  restartBrowser_: function() {
+    window.open("chrome://restart", "_self");
+  },
+
 });
 })();

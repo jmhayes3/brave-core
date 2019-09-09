@@ -13,6 +13,8 @@ cr.define('settings', function() {
      * @param {string} policy name.
      */
     setWebRTCPolicy(policy) {}
+
+    wasPushMessagingEnabledAtStartup() {}
   }
 
   /**
@@ -27,6 +29,10 @@ cr.define('settings', function() {
     /** @override */
     setWebRTCPolicy(policy) {
       chrome.send('setWebRTCPolicy', [policy]);
+    }
+
+    wasPushMessagingEnabledAtStartup() {
+      return loadTimeData.getBoolean('pushMessagingEnabledAtStartup');
     }
   }
 

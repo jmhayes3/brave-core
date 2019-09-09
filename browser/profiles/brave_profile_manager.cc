@@ -32,6 +32,7 @@
 #include "chrome/common/pref_names.h"
 #include "chrome/grit/generated_resources.h"
 #include "components/bookmarks/common/bookmark_pref_names.h"
+#include "components/gcm_driver/gcm_channel_status_syncer.h"
 #include "components/prefs/pref_service.h"
 #include "components/safe_browsing/common/safe_browsing_prefs.h"
 #include "components/signin/public/base/signin_pref_names.h"
@@ -80,6 +81,9 @@ void BraveProfileManager::InitTorProfileUserPrefs(Profile* profile) {
 #if BUILDFLAG(ENABLE_BRAVE_TRANSLATE_EXTENSION)
   pref_service->SetBoolean(prefs::kOfferTranslateEnabled, false);
 #endif
+
+  // Push notifications are disabled in Tor mode
+  pref_service->SetBoolean(gcm::prefs::kGCMChannelStatus, false);
 }
 
 void BraveProfileManager::InitProfileUserPrefs(Profile* profile) {

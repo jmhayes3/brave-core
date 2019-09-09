@@ -9,6 +9,7 @@
 #include "chrome/browser/ui/browser.h"
 #include "chrome/common/pref_names.h"
 #include "chrome/test/base/in_process_browser_test.h"
+#include "components/gcm_driver/gcm_channel_status_syncer.h"
 #include "components/prefs/pref_service.h"
 #include "components/safe_browsing/common/safe_browsing_prefs.h"
 #include "components/spellcheck/browser/pref_names.h"
@@ -48,6 +49,9 @@ IN_PROC_BROWSER_TEST_F(BraveProfilePrefsBrowserTest, MiscBravePrefs) {
       browser()->profile()->GetPrefs()->GetBoolean(kIPFSCompanionEnabled));
   EXPECT_TRUE(
       browser()->profile()->GetPrefs()->GetBoolean(kBraveWalletEnabled));
+  EXPECT_FALSE(
+      browser()->profile()->GetPrefs()->GetBoolean(
+          gcm::prefs::kGCMChannelStatus));
 }
 
 // First run of Brave should default Shields to Simple view
