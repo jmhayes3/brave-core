@@ -1,8 +1,11 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
+/* Copyright (c) 2019 The Brave Authors. All rights reserved.
+ * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 #include "brave/common/resource_bundle_helper.h"
+
+#include <string>
 
 #include "base/command_line.h"
 #include "base/path_service.h"
@@ -16,8 +19,38 @@
 #include "base/strings/sys_string_conversions.h"
 #endif
 
+#if defined(OS_ANDROID)
+#include "base/android/apk_assets.h"
+#include "ui/base/ui_base_paths.h"
+#endif
+
 namespace {
 
+#if defined(OS_ANDROID)
+int g_brave_resources_fd = -1;
+base::MemoryMappedFile::Region g_brave_resources_region;
+
+bool LoadFromApkOrFile(const char* apk_path,
+                       const base::FilePath* disk_path,
+                       int* out_fd,
+                       base::MemoryMappedFile::Region* out_region) {
+  DCHECK_EQ(*out_fd, -1) << "Attempt to load " << apk_path << " twice.";
+  if (apk_path != nullptr) {
+    *out_fd = base::android::OpenApkAsset(apk_path, out_region);
+  }
+  // For unit tests, the file exists on disk.
+  if (*out_fd < 0 && disk_path != nullptr) {
+    int flags = base::File::FLAG_OPEN | base::File::FLAG_READ;
+    *out_fd = base::File(*disk_path, flags).TakePlatformFile();
+    *out_region = base::MemoryMappedFile::Region::kWholeFile;
+  }
+  bool success = *out_fd >= 0;
+  if (!success) {
+    LOG(ERROR) << "Failed to open pak file: " << apk_path;
+  }
+  return success;
+}
+#else
 base::FilePath GetResourcesPakFilePath() {
 #if defined(OS_MACOSX)
   return base::mac::PathForFrameworkBundleResource(
@@ -29,6 +62,7 @@ base::FilePath GetResourcesPakFilePath() {
   return pak_path;
 #endif  // OS_MACOSX
 }
+#endif
 
 base::FilePath GetScaledResourcesPakFilePath(ui::ScaleFactor scale_factor) {
   DCHECK(scale_factor == ui::SCALE_FACTOR_100P ||
@@ -49,13 +83,22 @@ base::FilePath GetScaledResourcesPakFilePath(ui::ScaleFactor scale_factor) {
 #endif  // OS_MACOSX
 }
 
-}
+}  // namespace
 
 namespace brave {
 
 void InitializeResourceBundle() {
   auto& rb = ui::ResourceBundle::GetSharedInstance();
+#if defined(OS_ANDROID)
+  bool success =
+      LoadFromApkOrFile("assets/brave_resources.pak", nullptr,
+                        &g_brave_resources_fd, &g_brave_resources_region);
+  DCHECK(success);
+  rb.AddDataPackFromFileRegion(base::File(g_brave_resources_fd),
+                               g_brave_resources_region, ui::SCALE_FACTOR_NONE);
+#else
   rb.AddDataPackFromPath(GetResourcesPakFilePath(), ui::SCALE_FACTOR_NONE);
+#endif
 
   rb.AddDataPackFromPath(GetScaledResourcesPakFilePath(ui::SCALE_FACTOR_100P),
                          ui::SCALE_FACTOR_100P);
@@ -90,4 +133,4 @@ bool SubprocessNeedsResourceBundle() {
       process_type == switches::kUtilityProcess;
 }
 
-}
+}  // namespace brave
