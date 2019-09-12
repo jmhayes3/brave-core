@@ -200,6 +200,7 @@ declare namespace chrome.braveShields {
   const getHTTPSEverywhereEnabledAsync: any
   const setNoScriptControlTypeAsync: any
   const getNoScriptControlTypeAsync: any
+  const reportBrokenSite: any
 
   type BraveShieldsViewPreferences = {
     showAdvancedView: boolean

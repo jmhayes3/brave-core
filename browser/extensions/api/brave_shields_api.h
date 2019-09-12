@@ -155,6 +155,17 @@ class BraveShieldsGetNoScriptControlTypeFunction
   ResponseAction Run() override;
 };
 
+class BraveShieldsReportBrokenSiteFunction
+    : public UIThreadExtensionFunction {
+ public:
+  DECLARE_EXTENSION_FUNCTION("braveShields.reportBrokenSite", UNKNOWN)
+
+ protected:
+  ~BraveShieldsReportBrokenSiteFunction() override {}
+
+  ResponseAction Run() override;
+};
+
 }  // namespace api
 }  // namespace extensions
 

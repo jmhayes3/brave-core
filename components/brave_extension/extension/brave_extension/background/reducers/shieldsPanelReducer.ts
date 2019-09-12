@@ -28,7 +28,8 @@ import {
   setAllowCookies,
   toggleShieldsValue,
   requestShieldPanelData,
-  setAllowScriptOriginsOnce
+  setAllowScriptOriginsOnce,
+  reportBrokenSite
 } from '../api/shieldsAPI'
 import { reloadTab } from '../api/tabsAPI'
 
@@ -121,6 +122,16 @@ export default function shieldsPanelReducer (
         })
       state = shieldsPanelState
         .updateTabShieldsData(state, tabId, { braveShields: action.setting })
+      break
+    }
+    case shieldsPanelTypes.REPORT_BROKEN_SITE: {
+      const tabId: number = shieldsPanelState.getActiveTabId(state)
+      const tabData = shieldsPanelState.getActiveTabData(state)
+      if (!tabData) {
+        console.error('Active tab not found')
+        break
+      }
+      reportBrokenSite(tabId)
       break
     }
     case shieldsPanelTypes.HTTPS_EVERYWHERE_TOGGLED: {
