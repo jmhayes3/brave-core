@@ -45,20 +45,20 @@ exports[`ModalContribute tests basic tests matches the snapshot 1`] = `
             className="sc-ifAKCX csScrx"
           >
             <div
-              className="sc-fxmata iwrIdh"
+              className="sc-hQfrgq gXAbeQ"
             >
               <div
-                className="sc-boCWhm gPpBhW"
+                className="sc-OnmeF jaMrq"
               >
                 <div
-                  className="sc-cIsjWt ibtXuY"
+                  className="sc-fxMfqs eDhLNa"
                 >
                   <div
-                    className="sc-OnmeF gQhETW"
+                    className="sc-eIvgmF kJERBf"
                     onClick={[Function]}
                   >
                     <div
-                      className="sc-fxMfqs fTveKp"
+                      className="sc-bkypNX bSEQTJ"
                       selected={true}
                       type="contribute"
                     >
@@ -66,11 +66,11 @@ exports[`ModalContribute tests basic tests matches the snapshot 1`] = `
                     </div>
                   </div>
                   <div
-                    className="sc-OnmeF fsLRjJ"
+                    className="sc-eIvgmF eQocgp"
                     onClick={[Function]}
                   >
                     <div
-                      className="sc-fxMfqs gwNGqr"
+                      className="sc-bkypNX kJDTYO"
                       selected={false}
                       type="contribute"
                     >
@@ -79,7 +79,7 @@ exports[`ModalContribute tests basic tests matches the snapshot 1`] = `
                   </div>
                 </div>
                 <div
-                  className="sc-hQfrgq eDFSyR"
+                  className="sc-rzOft befsNG"
                 />
               </div>
             </div>
@@ -116,7 +116,7 @@ exports[`ModalContribute tests basic tests matches the snapshot 1`] = `
                     className="sc-cHSUfg ieJtXP"
                   >
                     <div
-                      className="sc-hAnkBK jbTvEX sc-imDfJI ijSMla"
+                      className="sc-bJTOcE bnlUvl sc-geAPOV wuHfQ"
                     >
                       
                     </div>

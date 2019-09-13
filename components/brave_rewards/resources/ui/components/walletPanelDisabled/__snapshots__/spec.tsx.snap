@@ -54,16 +54,16 @@ exports[`DisabledPanel tests basic tests matches the snapshot 1`] = `
     className="sc-bZQynM hALbJp"
   >
     <button
-      className="sc-cIbcTr jdvKwO"
+      className="sc-fAfrNB jHmlmJ"
       data-test-id="optInAction"
       type="tip"
     >
       <span
-        className="sc-hmyDHa byarxu"
+        className="sc-MKjYC hvXVCW"
       >
         MISSING: enableRewards
         <div
-          className="sc-jTNJqp hRpIgu"
+          className="sc-bQduHL hMfHDU"
         >
           <span
             className="sc-EHOje eqCgzA"

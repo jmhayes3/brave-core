@@ -2,27 +2,27 @@
 
 exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
 <div
-  className="sc-eetwQk cbupHD"
+  className="sc-fdJbru bPPdLK"
   id="welcome-page"
 >
   <div
-    className="sc-cIwbeI fMYDEp"
+    className="sc-dYcyhn dwGjjw"
   >
     <div
-      className="sc-gbuiJB cMlfbd"
+      className="sc-bOxvsH khIkgD"
     >
       <div
-        className="sc-gGsJSs sVFAr"
+        className="sc-liPmeQ gwAxBS"
       >
         <div
           className="sc-bdVaJa izGEVs"
           id="rewards-hero"
         >
           <div
-            className="sc-gGsJSs sVFAr"
+            className="sc-liPmeQ gwAxBS"
           >
             <div
-              className="sc-liPmeQ iRerGN"
+              className="sc-eWRdud cuPxa"
             >
               <svg
                 aria-hidden="true"
@@ -53,56 +53,56 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
               </svg>
             </div>
             <div
-              className="sc-haEqAx jpGcKh"
+              className="sc-gSbCxx xRyin"
             >
               <h2
-                className="sc-lljKfs dhgNel sc-dHmInP kglPMd sc-hcmgZB dhhPri"
+                className="sc-HYMd jYyhro sc-dHmInP kglPMd sc-hcmgZB dhhPri"
               >
                 MISSING: braveRewardsTitle
               </h2>
               <span
-                className="sc-eWRdud iXxmtz"
+                className="sc-haEqAx bKYAfx"
               >
                 TM
               </span>
               <h4
-                className="sc-bOxvsH jPIkIS sc-hgRTRy fcFRkx sc-iiUIRa bmbbVq"
+                className="sc-biNVYa jKQIvr sc-hgRTRy fcFRkx sc-iiUIRa bmbbVq"
               >
                 MISSING: braveRewardsSubTitle
               </h4>
               <p
-                className="sc-HYMd gcJRnD"
+                className="sc-tVThF isGueL"
               >
                 MISSING: braveRewardsDesc
               </p>
             </div>
           </div>
           <section
-            className="sc-buGlAa kPSGDj"
+            className="sc-gGsJSs hYkoak"
           >
             <button
-              className="sc-hlELIx fUdyH"
+              className="sc-eetwQk iXWlcM"
               data-test-id="optInAction"
               onClick={[Function]}
               type="opt-in"
             >
               <span
-                className="sc-erOsFi bmTQBu"
+                className="sc-cIwbeI fokLZc"
               >
                 MISSING: braveRewardsOptInText
               </span>
             </button>
           </section>
           <div
-            className="sc-ldQhTJ gClZgk"
+            className="sc-kBMPsl gPUZea"
           >
             <span
-              className="sc-gSbCxx iiXqX"
+              className="sc-dgAbBl hnFEah"
             >
               MISSING: serviceTextWelcome
                
               <a
-                className="sc-lenlpJ hYCQJD"
+                className="sc-kGYfcE pHVbW"
               >
                 MISSING: termsOfService
               </a>
@@ -110,7 +110,7 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
               MISSING: and
                
               <a
-                className="sc-lenlpJ hYCQJD"
+                className="sc-kGYfcE pHVbW"
               >
                 MISSING: privacyPolicy
               </a>
@@ -118,15 +118,15 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
             </span>
           </div>
           <div
-            className="sc-gGsJSs sVFAr"
+            className="sc-liPmeQ gwAxBS"
           >
             <p
-              className="sc-jhLVlY iZYdVn"
+              className="sc-gykZtl hhEZZ"
             >
               MISSING: braveRewardsTeaser
             </p>
             <button
-              className="sc-biNVYa dtECPP"
+              className="sc-ldQhTJ ccGfxH"
               onClick={[Function]}
             >
               <svg
@@ -144,29 +144,29 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
         </div>
       </div>
       <section
-        className="sc-gOCRIc hribaq"
+        className="sc-bZJeJD jMyYkU"
       >
         <section
-          className="sc-gOCRIc hribaq"
+          className="sc-bZJeJD jMyYkU"
         >
           <div
-            className="sc-jUiVId eccNOm"
+            className="sc-gbuiJB ciHAvn"
           >
             <section
-              className="sc-kecUPG iLZXMC"
+              className="sc-lljKfs kBAKR"
             >
               <h3
-                className="sc-bZVNgQ dXndEL sc-eLdqWK dauevv sc-ejGVNB gsiDVz"
+                className="sc-iDsUSg ecnlaK sc-eLdqWK dauevv sc-ejGVNB gsiDVz"
               >
                 MISSING: whyBraveRewards
               </h3>
               <p
-                className="sc-iDsUSg Kocug"
+                className="sc-ffCbqV hlEFgZ"
               >
                 MISSING: whyBraveRewardsDesc1
               </p>
               <p
-                className="sc-iDsUSg Kocug"
+                className="sc-ffCbqV hlEFgZ"
               >
                 MISSING: whyBraveRewardsDesc2
               </p>
@@ -174,7 +174,7 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
           </div>
         </section>
         <section
-          className="sc-fhiYOA clNLkv"
+          className="sc-gHpXsY MkrDp"
         >
           <section
             id="rewards-info"
@@ -317,41 +317,41 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
           </section>
         </section>
         <section
-          className="sc-bZJeJD ipgLmg"
+          className="sc-bZVNgQ gXYhts"
         >
           <section
-            className="sc-flvzOl jlZNPw"
+            className="sc-fhiYOA ifNssd"
           >
             <h4
-              className="sc-gHpXsY fzFmFn sc-hgRTRy fcFRkx sc-iiUIRa bmbbVq"
+              className="sc-jhLVlY hlgiAf sc-hgRTRy fcFRkx sc-iiUIRa bmbbVq"
             >
               MISSING: readyToTakePart
             </h4>
             <section
-              className="sc-fJwQoQ bxyYsa"
+              className="sc-kecUPG kPLbBl"
             >
               <button
-                className="sc-hlELIx iGumNU"
+                className="sc-eetwQk jygSxz"
                 onClick={[Function]}
                 type="cta-opt-in"
               >
                 <span
-                  className="sc-erOsFi bmTQBu"
+                  className="sc-cIwbeI fokLZc"
                 >
                   MISSING: readyToTakePartOptInText
                 </span>
               </button>
             </section>
             <div
-              className="sc-ldQhTJ iINLQJ"
+              className="sc-kBMPsl iRdhfJ"
             >
               <span
-                className="sc-gSbCxx hTmboJ"
+                className="sc-dgAbBl jlqkBd"
               >
                 MISSING: serviceTextReady
                  
                 <a
-                  className="sc-lenlpJ eWkxuv"
+                  className="sc-kGYfcE dSscYp"
                 >
                   MISSING: termsOfService
                 </a>
@@ -359,7 +359,7 @@ exports[`WelcomePage tests basic tests matches the snapshot 1`] = `
                 MISSING: and
                  
                 <a
-                  className="sc-lenlpJ eWkxuv"
+                  className="sc-kGYfcE dSscYp"
                 >
                   MISSING: privacyPolicy
                 </a>

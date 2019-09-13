@@ -12,25 +12,25 @@ exports[`WalletPanel tests basic tests matches the snapshot 1`] = `
       className="sc-bwzfXH keKaso"
     >
       <div
-        className="sc-jtHxuu hCSyOY"
+        className="sc-fFTYTi iLAxtd"
       >
         <div
-          className="sc-blIhvV fcEzuA"
+          className="sc-bTiqRo cPBsqz"
           type="big"
         >
           <img
-            className="sc-bYTsla jBgRXi"
+            className="sc-bEufUU xmiYB"
             src=""
           />
         </div>
         <div
-          className="sc-glUWqk bFDkRP"
+          className="sc-gQNndl bZmhwX"
         >
           <div
-            className="sc-fFTYTi eZhLGV"
+            className="sc-MYvYT lfwrRY"
           >
             <span
-              className="sc-bTiqRo bAajqs"
+              className="sc-RmnOB fyqQzN"
               type="big"
             >
               
@@ -43,11 +43,11 @@ exports[`WalletPanel tests basic tests matches the snapshot 1`] = `
       className="sc-htoDjs iCsrWq"
     >
       <button
-        className="sc-gwZsXD dbIsZi"
+        className="sc-bWFPNQ vFkbA"
         type="tip"
       >
         <span
-          className="sc-cKZAiZ jNaFHx"
+          className="sc-cBOTKl fcAKtl"
         >
           MISSING: donateNow
         </span>

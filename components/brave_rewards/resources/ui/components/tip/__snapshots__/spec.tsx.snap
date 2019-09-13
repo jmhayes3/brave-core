@@ -10,7 +10,7 @@ exports[`Tip tests basic tests matches the snapshot 1`] = `
   >
     <svg
       aria-hidden="true"
-      className="sc-cJSrbW dquraM"
+      className="sc-frDJqD bnsddl"
       focusable="false"
       viewBox="0 0 32 32"
     >
@@ -40,7 +40,7 @@ exports[`Tip tests basic tests matches the snapshot 1`] = `
         
       </div>
       <div
-        className="sc-jzJRlG OMbkx"
+        className="sc-cSHVUG crhWTW"
       />
       <div
         className="sc-EHOje kWsEMu"
@@ -55,26 +55,26 @@ exports[`Tip tests basic tests matches the snapshot 1`] = `
           className="sc-htpNat iDQmTi"
         >
           <div
-            className="sc-giadOv hablko"
+            className="sc-ipXKqB cutIrd"
           >
             <div
-              className="sc-hmXxxW fJeAUB"
+              className="sc-kLIISr fVWUYl"
               size="small"
             >
               MISSING: off
             </div>
             <div
-              className="sc-fONwsr fzRQlH"
+              className="sc-hmXxxW ezaKtg"
               data-test-id="toggle"
               onClick={[Function]}
               size="small"
             >
               <div
-                className="sc-VJcYb fqecIM"
+                className="sc-cqCuEk cjTGaV"
                 size="small"
               />
               <div
-                className="sc-ipXKqB gcGQCJ"
+                className="sc-dliRfk hUQHLm"
                 size="small"
                 type="light"
               />
@@ -84,23 +84,23 @@ exports[`Tip tests basic tests matches the snapshot 1`] = `
       </div>
     </div>
     <div
-      className="sc-dnqmqq dJPirg"
+      className="sc-dnqmqq cNuemM"
       data-test-id="send-tip-button"
       onClick={[Function]}
     >
       <div
-        className="sc-gZMcBi jWEJbP"
+        className="sc-gqjmRU jJZzlq"
       >
         <button
-          className="sc-iwsKbI VYNKi"
+          className="sc-iwsKbI dQtLtK"
         >
           <span
-            className="sc-gqjmRU kOZzMK"
+            className="sc-VigVT hUkKcc"
             disabled={false}
           >
             <svg
               aria-hidden="true"
-              className="sc-feJyhm dMzbko"
+              className="sc-jwKygS hmqtDV"
               focusable="false"
               viewBox="0 0 32 32"
             >

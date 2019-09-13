@@ -15,7 +15,7 @@ exports[`List tests basic tests matches the snapshot 1`] = `
     >
       <svg
         aria-hidden="true"
-        className="sc-bYSBpT iVrbXs"
+        className="sc-kTUwUJ llMgdW"
         focusable="false"
         viewBox="0 0 32 32"
       >
@@ -68,16 +68,16 @@ exports[`List tests basic tests matches the snapshot 1`] = `
             className="sc-VigVT jeQZpZ"
           >
             <p>
-              MISSING: rewardsBannerText1
+              MISSING: rewardsBannerMonthlyText1
             </p>
             <p>
-              MISSING: rewardsBannerText2
+              MISSING: rewardsBannerMonthlyText2
             </p>
           </div>
         </div>
       </div>
       <div
-        className="sc-bxivhb bBgBwa"
+        className="sc-bxivhb eDJoPI"
       >
         <div
           className="sc-jTzLTM hHHsqS"
@@ -103,60 +103,27 @@ exports[`List tests basic tests matches the snapshot 1`] = `
               MISSING: donationAmount
             </div>
             <div
-              className="sc-jlyJG jLtThc"
+              className="sc-gipzik hBpvWo"
             />
-            <div
-              className="sc-jKJlTe eaDBNk"
-            >
-              <div
-                data-test-id="monthlyCheckbox"
-              >
-                <div
-                  className="sc-gmeYpB exFqmA"
-                  onClick={[Function]}
-                  size="small"
-                  type="dark"
-                >
-                  <span
-                    className="sc-kZmsYB jNWKlI"
-                    disabled={false}
-                    selected={false}
-                    size="small"
-                    type="dark"
-                  />
-                  <span
-                    className="sc-RcBXQ jMYWTJ"
-                    disabled={false}
-                    size="small"
-                  >
-                    <span
-                      className="sc-jzJRlG bGNzwc"
-                    >
-                      MISSING: makeMonthly
-                    </span>
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
           <div
-            className="sc-jWBwVP cSBczW"
+            className="sc-jWBwVP gNWmzu"
             data-test-id="send-tip-button"
             onClick={[Function]}
           >
             <div
-              className="sc-cMljjf jPUONN"
+              className="sc-jAaTju hYGbTI"
             >
               <button
-                className="sc-brqgnP ebwauj"
+                className="sc-brqgnP hiDoSh"
               >
                 <span
-                  className="sc-jAaTju enfXWo"
+                  className="sc-jDwBTQ SPMG"
                   disabled={false}
                 >
                   <svg
                     aria-hidden="true"
-                    className="sc-hrWEMg dSLrEs"
+                    className="sc-hXRMBi lmcLaY"
                     focusable="false"
                     viewBox="0 0 32 32"
                   >

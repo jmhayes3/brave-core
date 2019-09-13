@@ -13,27 +13,27 @@ exports[`Donate tests basic tests matches the snapshot 1`] = `
       className="sc-htpNat bxJFEQ"
     />
     <div
-      className="sc-iwsKbI jjELrd"
+      className="sc-gZMcBi hzxpjN"
     />
   </div>
   <div
-    className="sc-bxivhb HzIUw"
+    className="sc-bxivhb gcthUt"
     data-test-id="send-tip-button"
     onClick={[Function]}
   >
     <div
-      className="sc-EHOje gcNDzM"
+      className="sc-bZQynM hpxSa"
     >
       <button
-        className="sc-ifAKCX jEicJF"
+        className="sc-ifAKCX jgDLYQ"
       >
         <span
-          className="sc-bZQynM lhtRhG"
+          className="sc-gzVnrw EbTtX"
           disabled={false}
         >
           <svg
             aria-hidden="true"
-            className="sc-fYxtnH Ptgz"
+            className="sc-ktHwxA dGfSmA"
             focusable="false"
             viewBox="0 0 32 32"
           >
