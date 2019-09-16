@@ -1,0 +1,22 @@
+diff --git a/chrome/android/java/src/org/chromium/chrome/browser/init/ChromeBrowserInitializer.java b/chrome/android/java/src/org/chromium/chrome/browser/init/ChromeBrowserInitializer.java
+index 00315dd4ba42ff47b881dcdbcdac9391fe471066..817df2800e1282d0ba77a553ba3c6b79b8127fb1 100644
+--- a/chrome/android/java/src/org/chromium/chrome/browser/init/ChromeBrowserInitializer.java
++++ b/chrome/android/java/src/org/chromium/chrome/browser/init/ChromeBrowserInitializer.java
+@@ -36,7 +36,7 @@ import org.chromium.chrome.browser.ChromeSwitches;
+ import org.chromium.chrome.browser.FileProviderHelper;
+ import org.chromium.chrome.browser.crash.LogcatExtractionRunnable;
+ import org.chromium.chrome.browser.download.DownloadManagerService;
+-import org.chromium.chrome.browser.services.GoogleServicesManager;
++// import org.chromium.chrome.browser.services.GoogleServicesManager;
+ import org.chromium.chrome.browser.util.FeatureUtilities;
+ import org.chromium.chrome.browser.webapps.ActivityAssigner;
+ import org.chromium.chrome.browser.webapps.ChromeWebApkHost;
+@@ -366,7 +366,7 @@ public class ChromeBrowserInitializer {
+             StrictMode.setThreadPolicy(oldPolicy);
+             LibraryPrefetcher.asyncPrefetchLibrariesToMemory();
+             getBrowserStartupController().startBrowserProcessesSync(false);
+-            GoogleServicesManager.get();
++            // GoogleServicesManager.get();
+         } finally {
+             TraceEvent.end("ChromeBrowserInitializer.startChromeBrowserProcessesSync");
+         }

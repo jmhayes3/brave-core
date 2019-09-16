@@ -1,0 +1,13 @@
+diff --git a/chrome/android/chrome_java_sources.gni b/chrome/android/chrome_java_sources.gni
+index 5fdeee1fb55ee84bad2bfb93b81c4e5b77e1e959..6eae16364bd1046396c4f7ecbd8b600d9cae682b 100644
+--- a/chrome/android/chrome_java_sources.gni
++++ b/chrome/android/chrome_java_sources.gni
+@@ -1394,7 +1394,7 @@ chrome_java_sources = [
+   "java/src/org/chromium/chrome/browser/services/AccountsChangedReceiver.java",
+   "java/src/org/chromium/chrome/browser/services/AndroidEduAndChildAccountHelper.java",
+   "java/src/org/chromium/chrome/browser/services/AndroidEduOwnerCheckCallback.java",
+-  "java/src/org/chromium/chrome/browser/services/GoogleServicesManager.java",
++#  "java/src/org/chromium/chrome/browser/services/GoogleServicesManager.java",
+   "java/src/org/chromium/chrome/browser/services/gcm/ChromeGcmListenerService.java",
+   "java/src/org/chromium/chrome/browser/services/gcm/GCMBackgroundService.java",
+   "java/src/org/chromium/chrome/browser/services/gcm/GCMBackgroundTask.java",

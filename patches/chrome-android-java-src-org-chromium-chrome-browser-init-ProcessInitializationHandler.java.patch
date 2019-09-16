@@ -1,0 +1,22 @@
+diff --git a/chrome/android/java/src/org/chromium/chrome/browser/init/ProcessInitializationHandler.java b/chrome/android/java/src/org/chromium/chrome/browser/init/ProcessInitializationHandler.java
+index a82699d3fb62ea54d2708945b7b25daf5e2f7bdf..faf3f9db53b52fb57043f912abf584d8537647b9 100644
+--- a/chrome/android/java/src/org/chromium/chrome/browser/init/ProcessInitializationHandler.java
++++ b/chrome/android/java/src/org/chromium/chrome/browser/init/ProcessInitializationHandler.java
+@@ -71,7 +71,7 @@ import org.chromium.chrome.browser.preferences.PrefServiceBridge;
+ import org.chromium.chrome.browser.profiles.ProfileManagerUtils;
+ import org.chromium.chrome.browser.rlz.RevenueStats;
+ import org.chromium.chrome.browser.searchwidget.SearchWidgetProvider;
+-import org.chromium.chrome.browser.services.GoogleServicesManager;
++// import org.chromium.chrome.browser.services.GoogleServicesManager;
+ import org.chromium.chrome.browser.share.ShareHelper;
+ import org.chromium.chrome.browser.sync.SyncController;
+ import org.chromium.chrome.browser.util.ConversionUtils;
+@@ -390,7 +390,7 @@ public class ProcessInitializationHandler {
+         deferredStartupHandler.addDeferredTask(new Runnable() {
+             @Override
+             public void run() {
+-                GoogleServicesManager.get().onMainActivityStart();
++                // GoogleServicesManager.get().onMainActivityStart();
+                 RevenueStats.getInstance();
+             }
+         });
