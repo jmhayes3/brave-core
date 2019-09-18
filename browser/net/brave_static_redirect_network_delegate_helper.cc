@@ -64,8 +64,11 @@ int OnBeforeURLRequest_StaticRedirectWorkForGURL(
   }
 
   if (safebrowsingfilecheck_pattern.MatchesHost(request_url)) {
-    replacements.SetHostStr(kBraveSafeBrowsingFileCheckProxy);
-    *new_url = request_url.ReplaceComponents(replacements);
+    // Download protection is currently disabled
+    // (brave/brave-browser#4341) until the list of metadata sent is
+    // truncated.
+    //replacements.SetHostStr(kBraveSafeBrowsingFileCheckProxy);
+    //*new_url = request_url.ReplaceComponents(replacements);
     return net::OK;
   }
 
