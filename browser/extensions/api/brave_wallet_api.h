@@ -16,7 +16,7 @@ namespace extensions {
 namespace api {
 
 class BraveWalletPromptToEnableWalletFunction :
-    public UIThreadExtensionFunction {
+    public ExtensionFunction {
  public:
   DECLARE_EXTENSION_FUNCTION("braveWallet.promptToEnableWallet", UNKNOWN)
 
@@ -26,7 +26,7 @@ class BraveWalletPromptToEnableWalletFunction :
   ResponseAction Run() override;
 };
 
-class BraveWalletIsEnabledFunction : public UIThreadExtensionFunction {
+class BraveWalletIsEnabledFunction : public ExtensionFunction {
  public:
   DECLARE_EXTENSION_FUNCTION("braveWallet.isEnabled", UNKNOWN)
 
@@ -36,7 +36,7 @@ class BraveWalletIsEnabledFunction : public UIThreadExtensionFunction {
   ResponseAction Run() override;
 };
 
-class BraveWalletGetWalletSeedFunction : public UIThreadExtensionFunction {
+class BraveWalletGetWalletSeedFunction : public ExtensionFunction {
  public:
   DECLARE_EXTENSION_FUNCTION("braveWallet.getWalletSeed", UNKNOWN)
 
@@ -61,7 +61,7 @@ class BraveWalletGetWalletSeedFunction : public UIThreadExtensionFunction {
   ResponseAction Run() override;
 };
 
-class BraveWalletGetProjectIDFunction : public UIThreadExtensionFunction {
+class BraveWalletGetProjectIDFunction : public ExtensionFunction {
  public:
   DECLARE_EXTENSION_FUNCTION("braveWallet.getProjectID", UNKNOWN)
 
