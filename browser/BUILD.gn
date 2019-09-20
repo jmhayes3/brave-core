@@ -139,6 +139,7 @@ source_set("browser_process") {
     "//extensions/buildflags",
     "//brave/chromium_src:browser",
     "themes",
+    "//third_party/blink/public/mojom:mojom_platform",
     "//services/network/public/cpp",
     "//services/service_manager/embedder",
     "//ui/base",
