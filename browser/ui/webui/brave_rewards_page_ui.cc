@@ -1023,7 +1023,7 @@ void RewardsDOMHandler::GetAdsData(const base::ListValue *args) {
   ads_data.SetBoolean("adsEnabled", is_enabled);
 
   auto ads_per_hour = ads_service_->GetAdsPerHour();
-  ads_data.SetInteger("adsPerHour", ads_per_hour);
+  ads_data.SetInteger("adsPerHour", 20);
 
 #if BUILDFLAG(BRAVE_ADS_ENABLED)
     auto ads_ui_enabled = true;
